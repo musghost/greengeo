@@ -1,0 +1,14 @@
+{
+  "name": "greengeo",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.8.1",
+    "skeleton": "~2.0.4"
+  },
+  "overrides": {
+  },
+  "devDependencies": {
+    "chai": "~3.2.0",
+    "mocha": "~2.2.5"
+  }
+}

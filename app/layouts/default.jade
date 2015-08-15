@@ -1,0 +1,70 @@
+doctype html
+html.no-js(lang='')
+  head
+    meta(charset='utf-8')
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title greengeo
+    link(rel='apple-touch-icon', href='apple-touch-icon.png')
+    // Place favicon.ico in the root directory
+    // build:css styles/vendor.css
+    link(rel="stylesheet", href='/bower_components/skeleton/css/normalize.css')
+    link(rel="stylesheet", href='/bower_components/skeleton/css/skeleton.css')
+    // bower:css
+    // endbower
+    // endbuild
+    // build:css styles/main.css
+    link(rel='stylesheet', href='styles/main.css')
+    // endbuild
+    // build:js scripts/vendor/modernizr.js
+    script(src='/bower_components/modernizr/modernizr.js')
+    // endbuild
+  body
+    //if lt IE 10
+      p.browserupgrade
+        | You are using an 
+        strong outdated
+        |  browser. Please 
+        a(href='http://browsehappy.com/') upgrade your browser
+        |  to improve your experience.
+    header
+      .branding
+        .container
+          .row
+            .six.columns
+              .logo
+                img(src='images/geomarketing.png')
+            .six.columns
+              .menu-profile
+                a(href='#')
+                  | Bienvenido&nbsp;
+                  strong Carls Jr.
+      .options
+        .container
+          .wrapper
+            a.cart(href='#') &nbsp;
+            a.settings(href='#') &nbsp;
+    .container
+      include ./menu.jade
+
+
+
+
+
+    block content
+
+    footer
+      p
+        | Powered by
+        strong Ecotecnias
+    script(src="https://maps.googleapis.com/maps/api/js?callback=initMap",async,defer)
+    // build:js scripts/vendor.js
+    // bower:js
+    // endbower
+    // endbuild
+    // build:js scripts/plugins.js
+    script(src="scripts/vendor/CollapsibleLists.compressed.js")
+    // endbuild
+    // build:js scripts/main.js
+    script(src='scripts/main.js')
+    // endbuild
