@@ -7,6 +7,20 @@ header
     background: $lightGreen
   .options
     background: $green
+    .wrapper
+      text-align: right
+    a
+      background-image: url('../images/sprite.png')
+      width: 21px
+      height: 17px
+      display: inline-block
+      text-decoration: none
+      margin-left: 5px
+      line-height: 20px
+      &.cart
+        background-position: -21px 0
+      &.settings
+        background-position: -42px 0
   .menu-profile
     text-align: right
     a
@@ -17,3 +31,10 @@ header
       text-decoration: none
       display: inline-block
       padding: 12px 0
+    span.caret-right
+      width: 20px
+      height: 20px
+      display: inline-block
+      background: 
+        image: url('../images/sprite.png')
+        position: 1px 0
