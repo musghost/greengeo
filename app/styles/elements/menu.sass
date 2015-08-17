@@ -1,13 +1,16 @@
 .principal-menu
   position: absolute
-  left: 0
-  top: 0
+  left: 50px
+  top: 70px
   width: 280px
   background: rgba(255, 255, 255, 0.87)
   padding: 0 10px 30px
   border-radius: 0 0 25px 25px
   z-index: 999
+  bottom: 50px
+  min-height: 510px
   .wrapper
+    height: 100%
   .description
     font-family: Arial, Helvetica, sans-serif
     h3
@@ -23,7 +26,8 @@
       font-family: Arial, sans-serif
       line-height: 16px
   .accordion
-    height: 50%
+    max-height: 50%
+    overflow-y: auto
   ul
     list-style: none
     margin: 5px 0 5px 15px
@@ -31,6 +35,7 @@
       margin-left: 0
     li
       overflow: hidden
+      margin-bottom: 5px
   .green-level
     background: $green
     &:after
@@ -113,6 +118,46 @@
     background-image: url('../images/marks.png')
     display: inline-block
     float: left
+    &.grid1
+      background-position: 0 0
+      & + .mark-description h4
+        color: #662d91
+    &.grid2
+      background-position: 0 -19px
+      & + .mark-description h4
+        color: #00ff00
+    &.human1
+      background-position: 0 -39px
+      height: 28px
+      & + .mark-description h4
+        color: #f15a24
+    &.human2
+      background-position: 0 -67px
+      height: 28px
+      & + .mark-description h4
+        color: #666666
+    &.money
+      background-position: 0 -114px
+      height: 13px
+      & + .mark-description h4
+        color: #00a19c
+    &.tick
+      background-position: 0 -114px
+      height: 13px
+      & + .mark-description h4
+        color: #009943
   .mark-description
     float: left
     width: 190px
+    margin-left: 5px
+    h4
+      font-size: 11px
+      font-weight: bolder
+      letter-spacing: 0
+      font-family: arial
+      margin: 0
+    p
+      font-size: 10px
+      margin: 0
+      line-height: 12px
+      color: #989898
