@@ -1,3 +1,28 @@
+var tabs = ['.principal-menu', '.buttons'];
+Array.prototype.forEach.call(tabs, function(tab){
+  var menu = document.querySelectorAll(tab)[0],
+    menuButton = menu.querySelector('.tab'),
+    toggleMenu = function(e){
+      e.preventDefault();
+      if (menu.classList) {
+        menu.classList.toggle('collapsed');
+      } else {
+        var classes = menu.className.split(' ');
+        var existingIndex = classes.indexOf('collapsed');
+
+        if (existingIndex >= 0)
+          classes.splice(existingIndex, 1);
+        else
+          classes.push('collapsed');
+
+        menu.className = classes.join(' ');
+      }
+    };
+  menuButton.addEventListener('click', toggleMenu);
+});
+
+
+
 var map;
 
 function initMap() {

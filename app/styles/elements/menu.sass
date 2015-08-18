@@ -7,6 +7,17 @@
   z-index: 999
   bottom: 50px
   min-height: 510px
+  &.collapsed
+    .description,
+    .accordion,
+    .logo,
+    .symbols
+      display: none
+    .tab:after
+      transform: translateX(-50%)
+  @media screen and (max-width: 320px)
+    left: 10px
+    width: 300px
   .wrapper
     height: 100%
   .description
@@ -100,9 +111,8 @@
     img
       max-width: 100%
   .symbols
-    padding: 0 40px 30px
+    padding: 0 40px 0px
     background: rgba(255, 255, 255, 0.87)
-    border-radius: 0 0 25px 25px
     text-align: center
     h3
       background: #808080
@@ -113,6 +123,22 @@
       letter-spacing: 0
       padding: 1px 0px 1px 5px
       text-align: left
+  .tab
+    background: rgba(255, 255, 255, 0.87)
+    height: 35px
+    border-radius: 0 0 25px 25px
+    position: relative
+    cursor: pointer
+    &:after
+      content: ''
+      width: 16px
+      height: 8px
+      background-position: -64px -6px
+      position: absolute
+      left: 50%
+      background-image: url("../images/sprite.png")
+      bottom: 10px
+      transform: translateX(-50%) rotate(180deg)
   .input-wrapper
     float: left
     width: 20px
