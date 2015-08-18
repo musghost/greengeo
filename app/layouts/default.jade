@@ -45,17 +45,15 @@ html.no-js(lang='')
           a.settings(href='#') &nbsp;
     include ./menu.jade
 
-
-
-
-
     block content
 
     footer
+      include ./buttons.jade
       p
         | Powered by
         strong Ecotecnias
     script(src="https://maps.googleapis.com/maps/api/js?callback=initMap",async,defer)
+    script(src="http://www.google.com/jsapi")
     // build:js scripts/vendor.js
     // bower:js
     // endbower

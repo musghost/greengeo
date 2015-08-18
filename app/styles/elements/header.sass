@@ -3,6 +3,8 @@ header
   position: relative
   .logo
     margin: 10px 0 5px
+    @media screen and (max-width: 559px)
+      text-align: center
   .branding
     background: $lightGreen
     padding: 0 50px
@@ -11,6 +13,11 @@ header
     .wrapper
       text-align: right
       padding-right: 50px
+      @media screen and (max-width: 559px)
+        padding-right: 0
+        text-align: center
+        a
+          margin-left: 10px
     a
       background-image: url('../images/sprite.png')
       width: 21px
@@ -25,6 +32,8 @@ header
         background-position: -42px 0
   .menu-profile
     text-align: right
+    @media screen and (max-width: 559px)
+      display: none
     a
       color: #fff
       font-family: arial
